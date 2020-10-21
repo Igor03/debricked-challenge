@@ -118,7 +118,3 @@ class Controller_2(Resource):
         for cpe in cpes:
             cves+=db.session.query(cve).filter(cve.cve_id == cpe.id_cve).all()
         return cves
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
